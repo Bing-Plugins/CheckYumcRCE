@@ -6,8 +6,8 @@ import cn.yistars.template.config.ConfigManager;
 import cn.yistars.template.listener.PlayerListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class BingTemplate extends JavaPlugin {
-    public static BingTemplate instance;
+public class CheckYumcRCE extends JavaPlugin {
+    public static CheckYumcRCE instance;
     public final ConfigAccessor Lang = new ConfigAccessor(this, "Lang.yml");
 
     @Override
@@ -18,7 +18,7 @@ public class BingTemplate extends JavaPlugin {
 
         this.getServer().getPluginManager().registerEvents(new PlayerListener(), this);
 
-        this.getCommand("BingTemplate").setExecutor(new MainCommand());
+        this.getCommand("CheckYumcRCE").setExecutor(new MainCommand());
 
         this.getLogger().info("Enabled successfully.");
     }

@@ -1,6 +1,6 @@
 package cn.yistars.template.command;
 
-import cn.yistars.template.BingTemplate;
+import cn.yistars.template.CheckYumcRCE;
 import cn.yistars.template.config.ConfigManager;
 import cn.yistars.template.config.LangManager;
 import org.bukkit.command.Command;
@@ -18,16 +18,16 @@ public class MainCommand implements CommandExecutor, TabCompleter {
     @Override
     public boolean onCommand(CommandSender sender, Command commands, String label, String[] args) {
         if (args.length == 0) {
-            sender.sendMessage("BingTemplate v%version% by Bing_Yanchi (TEMPLATE NEED EDIT)".replace("%version%", BingTemplate.instance.getDescription().getVersion()));
+            sender.sendMessage("CheckYumcRCE v%version% by Bing_Yanchi".replace("%version%", CheckYumcRCE.instance.getDescription().getVersion()));
 
-            if (sender.hasPermission("BingTemplate.admin")) {
+            if (sender.hasPermission("CheckYumcRCE.admin")) {
                 sender.sendMessage(LangManager.getLang("main-get-help"));
             }
 
             return true;
         }
 
-        if (!sender.hasPermission("BingTemplate.admin")) {
+        if (!sender.hasPermission("CheckYumcRCE.admin")) {
             return false;
         }
 
@@ -54,7 +54,7 @@ public class MainCommand implements CommandExecutor, TabCompleter {
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
         final List<String> completions = new ArrayList<>();
 
-        if (!sender.hasPermission("BingTemplate.admin")) {
+        if (!sender.hasPermission("CheckYumcRCE.admin")) {
             return completions;
         }
 

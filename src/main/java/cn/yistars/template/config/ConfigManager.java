@@ -1,12 +1,12 @@
 package cn.yistars.template.config;
 
-import cn.yistars.template.BingTemplate;
+import cn.yistars.template.CheckYumcRCE;
 
 public class ConfigManager {
     public static void loadConfig() {
-        BingTemplate.instance.saveDefaultConfig();
-        BingTemplate.instance.reloadConfig();
-        BingTemplate.instance.Lang.saveDefaultConfig();
-        BingTemplate.instance.Lang.reloadConfig();
+        CheckYumcRCE.instance.saveDefaultConfig();
+        CheckYumcRCE.instance.reloadConfig();
+        CheckYumcRCE.instance.Lang.saveDefaultConfig();
+        CheckYumcRCE.instance.Lang.reloadConfig();
     }
 }
